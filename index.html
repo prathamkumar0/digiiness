@@ -211,6 +211,29 @@
     .footer-grid{grid-template-columns:1fr}
   }
 
+  /* TICKET */
+  /* TICKET */
+  .ticket-link{text-decoration:none;display:block;margin-bottom:20px}
+  .ticket-card{background:var(--grad2);border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 6px 28px rgba(91,108,240,.35);animation:ticketPulse 2.8s ease-in-out infinite}
+  .ticket-card::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.06);opacity:0;transition:opacity .25s}
+  .ticket-card::after{content:'Tap to open ↗';position:absolute;top:10px;right:16px;font-size:.7rem;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase}
+  .ticket-card:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 16px 48px rgba(91,108,240,.55);animation:none}
+  .ticket-card:hover::before{opacity:1}
+  .ticket-left{display:flex;align-items:center;gap:16px}
+  .ticket-icon{font-size:2rem;line-height:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.2));animation:wiggle 3s ease-in-out infinite}
+  .ticket-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:500;color:#fff;margin-bottom:4px}
+  .ticket-sub{font-size:.82rem;color:rgba(255,255,255,.75);font-weight:300}
+  .ticket-arrow{color:#fff;background:rgba(255,255,255,.18);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .25s ease,background .25s ease}
+  .ticket-card:hover .ticket-arrow{transform:translateX(4px);background:rgba(255,255,255,.32)}
+  .ticket-notch{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--bg);top:50%;transform:translateY(-50%)}
+  .ticket-notch-left{left:-11px}
+  .ticket-notch-right{right:-11px}
+  .ticket-features{display:flex;flex-direction:column;gap:10px}
+  .ticket-feature{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-muted);font-weight:300}
+  .tf-dot{width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0}
+  @keyframes ticketPulse{0%,100%{box-shadow:0 6px 28px rgba(91,108,240,.35)}50%{box-shadow:0 6px 36px rgba(91,108,240,.6),0 0 0 6px rgba(91,108,240,.08)}}
+  @keyframes wiggle{0%,80%,100%{transform:rotate(0deg)}85%{transform:rotate(-12deg)}90%{transform:rotate(12deg)}95%{transform:rotate(-6deg)}}
+
   /* ANIMATIONS */
   .fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
   .fade-in.visible{opacity:1;transform:none}
@@ -764,46 +787,33 @@
         </a>
       </div>
       <div class="contact-form fade-in" style="transition-delay:.1s">
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:24px;font-weight:500">Send Us a Message</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="John Doe">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:8px;font-weight:500">Send Us a Message</h3>
+        <p style="font-size:.88rem;color:var(--text-muted);font-weight:300;margin-bottom:28px">Fill out a quick ticket and we'll get back to you within 24 hours.</p>
+
+        <!-- TICKET DESIGN -->
+        <a href="https://digiiness.com/contact-us/" target="_blank" class="ticket-link" aria-label="Create a support ticket">
+          <div class="ticket-card">
+            <div class="ticket-left">
+              <div class="ticket-icon">🎫</div>
+              <div>
+                <div class="ticket-title">Create a Ticket</div>
+                <div class="ticket-sub">Tell us about your project or query</div>
+              </div>
+            </div>
+            <div class="ticket-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="ticket-notch ticket-notch-left"></div>
+            <div class="ticket-notch ticket-notch-right"></div>
           </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+91 XXXXX XXXXX">
-          </div>
+        </a>
+
+        <div class="ticket-features">
+          <div class="ticket-feature"><span class="tf-dot"></span>Quick response within 24h</div>
+          <div class="ticket-feature"><span class="tf-dot" style="background:var(--accent)"></span>Free consultation</div>
+          <div class="ticket-feature"><span class="tf-dot" style="background:var(--accent2)"></span>No commitment required</div>
         </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label>Service You're Interested In</label>
-          <select>
-            <option value="">Select a service...</option>
-            <option>Website Development</option>
-            <option>App Development</option>
-            <option>SEO</option>
-            <option>Social Media Marketing</option>
-            <option>Meta Ads</option>
-            <option>Content Creation</option>
-            <option>Graphic Designing</option>
-            <option>Influencer Marketing</option>
-            <option>Shopify Development</option>
-            <option>Generative AI Bots</option>
-            <option>Automation Solutions</option>
-            <option>Full Digital Strategy</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Your Message</label>
-          <textarea placeholder="Tell us about your brand and what you're looking to achieve..."></textarea>
-        </div>
-        <button class="btn btn-primary form-submit" onclick="handleFormSubmit(event)">Send Message →</button>
       </div>
-    </div>
   </div>
 </section>
 
