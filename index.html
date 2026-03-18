@@ -73,7 +73,7 @@
   .stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:var(--primary)}
   .stat-label{font-size:.82rem;color:var(--text-muted);font-weight:400}
   .hero-img-wrap{position:relative}
-  .hero-img-box{width:100%;aspect-ratio:1/.82;border-radius:24px;background:linear-gradient(135deg,#EEF0FF,#E8F0FF);display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px dashed #C5CAFF;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+  .hero-img-box{width:100%;border-radius:24px;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;border:none;position:relative;overflow:hidden}
   .hero-img-box .placeholder-text{font-family:'Playfair Display',serif;font-size:1.1rem;color:#A0A8F0;text-align:center;padding:20px}
   .hero-img-box .placeholder-icon{font-size:3rem;margin-bottom:12px;opacity:.5}
   .floating-badge{position:absolute;background:#fff;border-radius:var(--radius-sm);padding:12px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:.85rem;font-weight:500;animation:float 4s ease-in-out infinite}
@@ -221,7 +221,7 @@
 <!-- NAV -->
 <nav>
   <div class="container nav-inner">
-    <a href="#hero" class="logo">Digi<span>iness</span></a>
+    <a href="#hero" class="logo"><img src="header.png" alt="Digiiness" style="height:40px;width:auto;display:block"></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -230,7 +230,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#contact" class="btn btn-primary" style="padding:10px 24px;font-size:.88rem">Book a Call</a>
+      <a href="tel:+918171193322" class="btn btn-primary" style="padding:10px 24px;font-size:.88rem">Book a Call</a>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -243,7 +243,7 @@
   <a href="#portfolio" onclick="toggleMenu()">Work</a>
   <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="#contact" class="btn btn-primary" onclick="toggleMenu()">Book a Call</a>
+  <a href="tel:+918171193322" class="btn btn-primary" onclick="toggleMenu()">Book a Call</a>
 </div>
 
 <!-- HERO -->
@@ -274,12 +274,8 @@
         </div>
       </div>
       <div class="hero-img-wrap fade-in" style="transition-delay:.2s">
-        <div class="hero-img-box">
-          <div class="placeholder-icon">🖼️</div>
-          <div class="placeholder-text">
-            <strong>Digiiness Banner Image</strong><br>
-            <small style="font-family:'DM Sans',sans-serif;font-size:.82rem">Replace with your agency banner or hero visual</small>
-          </div>
+        <div class="hero-img-box" style="background:none;border:none">
+          <img src="hero.png" alt="Digiiness Hero" style="width:100%;height:auto;display:block;border-radius:24px">
         </div>
         <div class="floating-badge one">
           <div class="badge-dot"></div>
@@ -461,21 +457,6 @@
         </div>
       </div>
 
-      <!-- Uss Da Dhaba -->
-      <div class="portfolio-card fade-in">
-        <div class="portfolio-thumb" style="background:linear-gradient(135deg,#FFF8EE,#FFF3E0)">
-          <div class="portfolio-thumb-icon">🍽️</div>
-        </div>
-        <div class="portfolio-body">
-          <div class="portfolio-brand">Uss Da Dhaba</div>
-          <div class="portfolio-owner">Owner: <span>Avinendra Singh</span></div>
-          <div class="portfolio-summary">An authentic dhaba brand that needed a digital makeover. We created a warm, inviting website and paired it with targeted Meta Ads and compelling content to drive footfall and orders.</div>
-          <div class="portfolio-tags">
-            <span class="tag">Website Dev</span><span class="tag">Content</span><span class="tag">Meta Ads</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Lilymin -->
       <div class="portfolio-card fade-in">
         <div class="portfolio-thumb" style="background:linear-gradient(135deg,#FFF0F8,#FCE8FF)">
@@ -597,19 +578,6 @@
           <div>
             <div class="tcard-name">Pavitra Kumar</div>
             <div class="tcard-role">Owner, Yourself Healthy</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tcard fade-in">
-        <div class="stars">★★★★★</div>
-        <div class="tcard-quote">"</div>
-        <div class="tcard-text">Digiiness gave Uss Da Dhaba the digital identity it deserved. The website they built beautifully captures the spirit of our brand, and the Meta Ads campaign drove real footfall results. Their content team truly understood our story and told it well.</div>
-        <div class="tcard-author">
-          <div class="tcard-avatar">A</div>
-          <div>
-            <div class="tcard-name">Avinendra Singh</div>
-            <div class="tcard-role">Owner, Uss Da Dhaba</div>
           </div>
         </div>
       </div>
@@ -863,12 +831,6 @@
         <p>📞 <a href="tel:+918171193322">+91 81711 93322</a></p>
         <p>🌐 <a href="https://digiiness.com" target="_blank">digiiness.com</a></p>
         <div style="margin-top:20px">
-          <div class="social-links">
-            <a href="#" class="social-link" title="Instagram">📸</a>
-            <a href="#" class="social-link" title="Facebook">📘</a>
-            <a href="#" class="social-link" title="LinkedIn">💼</a>
-            <a href="https://wa.me/918171193322" class="social-link" title="WhatsApp" target="_blank">💬</a>
-          </div>
         </div>
       </div>
     </div>
